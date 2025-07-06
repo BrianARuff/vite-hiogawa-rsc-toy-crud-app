@@ -1,0 +1,125 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "2cefd5b8-b9be-4691-9f4d-ee89812e3a99",
+  "prevId": "7ca8d3c0-ef82-47fc-baaa-e574e2202307",
+  "tables": {
+    "author_table": {
+      "name": "author_table",
+      "columns": {
+        "author_id": {
+          "name": "author_id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "book_author_table": {
+      "name": "book_author_table",
+      "columns": {
+        "book_id": {
+          "name": "book_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "author_id": {
+          "name": "author_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "book_author_table_book_id_book_table_book_id_fk": {
+          "name": "book_author_table_book_id_book_table_book_id_fk",
+          "tableFrom": "book_author_table",
+          "tableTo": "book_table",
+          "columnsFrom": [
+            "book_id"
+          ],
+          "columnsTo": [
+            "book_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "book_author_table_author_id_author_table_author_id_fk": {
+          "name": "book_author_table_author_id_author_table_author_id_fk",
+          "tableFrom": "book_author_table",
+          "tableTo": "author_table",
+          "columnsFrom": [
+            "author_id"
+          ],
+          "columnsTo": [
+            "author_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "book_table": {
+      "name": "book_table",
+      "columns": {
+        "book_id": {
+          "name": "book_id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "book_table_title_unique": {
+          "name": "book_table_title_unique",
+          "columns": [
+            "title"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

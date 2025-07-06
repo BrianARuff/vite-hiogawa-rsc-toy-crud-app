@@ -1,0 +1,35 @@
+{
+  "name": "@hiogawa/vite-rsc-examples-starter",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@hiogawa/vite-rsc": "latest",
+    "@libsql/client": "^0.15.9",
+    "better-sqlite3": "^12.2.0",
+    "dotenv": "^17.0.1",
+    "drizzle-orm": "^0.44.2",
+    "react": "latest",
+    "react-dom": "latest",
+    "uuid": "^11.1.0",
+    "zod": "^3.25.74"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.0.10",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "drizzle-kit": "^0.31.4",
+    "tsx": "^4.20.3",
+    "vite": "latest",
+    "vite-plugin-inspect": "latest"
+  }
+}
